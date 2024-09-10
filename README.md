@@ -2,6 +2,11 @@
 
 这是一个基于 Next.js 开发的世界时钟与天气应用，提供多个城市的实时时间和天气信息。
 
+<div style="display: flex; justify-content: space-between;">
+  <img src="images/light.png" alt="浅色模式" width="48%">
+  <img src="images/dark.png" alt="深色模式" width="48%">
+</div>
+
 ## 快速开始
 
 ### 前置要求
@@ -88,19 +93,3 @@
 这个应用可以部署到任何支持 Next.js 的平台，如 Vercel、Netlify 或自托管服务器。
 
 详细的部署说明，请参考 [Next.js 部署文档](https://nextjs.org/docs/deployment)。
-
-## 未来改进方向
-
-- 添加更多城市选项
-- 实现用户自定义城市列表
-- 增加更详细的天气信息和预报
-- 优化性能和加载速度
-- 添加多语言支持
-
-## 贡献
-
-欢迎贡献！请阅读 `CONTRIBUTING.md` 了解如何开始。
-
-## 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE.md](LICENSE.md) 文件了解详情。
