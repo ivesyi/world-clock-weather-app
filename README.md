@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 世界时钟与天气应用
 
-## Getting Started
+这是一个基于 Next.js 开发的世界时钟与天气应用，提供多个城市的实时时间和天气信息。
 
-First, run the development server:
+## 快速开始
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 前置要求
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js (推荐版本 14.0.0 或更高)
+- npm (通常随 Node.js 一起安装)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 安装
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. 克隆仓库：
+   ```bash
+   git clone https://github.com/ivesyi/world-clock-weather-app.git
+   cd world-clock-weather-app
+   ```
 
-## Learn More
+2. 安装依赖：
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. 创建 `.env.local` 文件，并添加您的 OpenWeatherMap API 密钥：
+   ```bash
+   NEXT_PUBLIC_OPENWEATHERMAP_API_KEY=your_api_key_here
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 运行
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+   打开浏览器访问 `http://localhost:3000` 查看应用。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 主要功能
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **世界时钟**
+   - 显示多个主要城市的当前时间
+   - 每个城市时钟包含以下信息：
+     - 城市名称
+     - 当前时间（数字显示）
+     - 当前日期
+     - 日出和日落时间
+     - 昼长时间
+     - 模拟时钟显示
+
+2. **世界天气**
+   - 显示多个主要城市的实时天气信息
+   - 每个城市的天气信息包括：
+     - 当前温度
+     - 天气状况（包括细分的云量和降雨量描述）
+     - 湿度
+     - 风速
+     - 气压
+   - 提供未来5天的天气预报
+
+3. **时差计算器**
+   - 允许用户计算不同城市之间的时差
+
+4. **深色模式切换**
+   - 提供深色/浅色模式切换功能，改善用户体验
+
+## 支持的城市
+
+应用当前支持以下城市的时间和天气信息：
+
+- 北京
+- 上海
+- 东京
+- 伦敦
+- 纽约
+- 悉尼
+
+## 技术特点
+
+- 使用 React Hooks 进行状态管理
+- 响应式设计，适配不同屏幕尺寸
+- 实时数据更新（每10分钟自动刷新天气数据）
+- 自定义 SVG 时钟显示
+- 使用外部 API 获取准确的日出日落时间和天气数据
+- 根据云量和降雨量细分天气状况描述
+
+## 部署
+
+这个应用可以部署到任何支持 Next.js 的平台，如 Vercel、Netlify 或自托管服务器。
+
+详细的部署说明，请参考 [Next.js 部署文档](https://nextjs.org/docs/deployment)。
+
+## 未来改进方向
+
+- 添加更多城市选项
+- 实现用户自定义城市列表
+- 增加更详细的天气信息和预报
+- 优化性能和加载速度
+- 添加多语言支持
+
+## 贡献
+
+欢迎贡献！请阅读 `CONTRIBUTING.md` 了解如何开始。
+
+## 许可证
+
+本项目采用 MIT 许可证 - 查看 [LICENSE.md](LICENSE.md) 文件了解详情。
