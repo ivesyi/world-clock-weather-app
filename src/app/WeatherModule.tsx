@@ -47,7 +47,7 @@ interface ForecastItem {
   };
 }
 
-const API_KEY = 'e270d7cb31cce3ad4d408ce47d6050bf'; // 请替换为您的 API 密钥
+const API_KEY = ''; // 请替换为您的 API 密钥
 
 // 天气状况翻译函数
 const translateWeatherCondition = (condition: string, cloudiness?: number, rainVolume?: number): string => {
